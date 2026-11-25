@@ -1,0 +1,30 @@
+# Compila cada PR e cada push na main: nada entra na main sem compilar.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      # Debug roda os Debug.Assert de MainForm (parser de tempo, nomes de arquivo) ao iniciar o app;
+      # aqui só compilamos as duas configurações.
+      - run: dotnet build -c Debug
+      - run: dotnet build -c Release
+
+      # Só o título: no PR de release a seção fica vazia de propósito.
+      - name: CHANGELOG mantém a seção [Não lançado]
+        shell: pwsh
+        run: |
+          if (-not (Select-String -Path CHANGELOG.md -SimpleMatch '## [Não lançado]' -Quiet)) {
+            Write-Error 'CHANGELOG.md precisa da seção "## [Não lançado]" (onde cada PR registra sua mudança).'; exit 1
+          }
