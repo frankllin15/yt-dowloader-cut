@@ -1,0 +1,15 @@
+# Saídas de build
+bin/
+obj/
+publish/
+publish-self-contained/
+instalador/
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Local do Claude Code
+.claude/settings.local.json
