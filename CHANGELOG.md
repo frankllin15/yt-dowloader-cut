@@ -8,6 +8,10 @@ Cada PR acrescenta sua linha em **[Não lançado]**; na release essa seção vir
 
 ## [Não lançado]
 
+## [1.0.0] - 2026-11-24
+
+Primeira versão publicada.
+
 ### Adicionado
 - Corte de vídeos do YouTube baixando só os trechos marcados (corte exato em H.264/AAC).
 - Preview do vídeo com marcação de início/fim direto pelo player e entrada de tempo só com números (`11606` → `01:16:06`).
@@ -17,4 +21,5 @@ Cada PR acrescenta sua linha em **[Não lançado]**; na release essa seção vir
 - Instalador (Inno Setup) que instala yt-dlp e ffmpeg via winget.
 - Fluxo de versionamento com tags, CI e release automática com changelog.
 
-[Não lançado]: https://github.com/frankllin15/yt-dowloader-cut/commits/main
+[Não lançado]: https://github.com/frankllin15/yt-dowloader-cut/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/frankllin15/yt-dowloader-cut/releases/tag/v1.0.0
