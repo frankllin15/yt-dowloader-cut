@@ -91,7 +91,8 @@ class MainForm : Form
 
     public MainForm()
     {
-        Text = "Estúdio de cortes · Tom de Louvor";
+        // Versão no título: em um hotfix dá para conferir na hora qual build está rodando.
+        Text = $"Estúdio de cortes · Tom de Louvor · v{Application.ProductVersion.Split('+')[0]}";
         Width = 1320; Height = 860;
         MinimumSize = new Size(1040, 640);
         StartPosition = FormStartPosition.CenterScreen;

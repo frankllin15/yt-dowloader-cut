@@ -1,7 +1,11 @@
-; Instalador do YtCortador. Compile com: iscc instalador.iss  (depois do dotnet publish self-contained)
+; Instalador do YtCortador. Compile com: iscc /DAppVersion=1.2.3 instalador.iss  (depois do dotnet publish self-contained)
+; A versão vem da tag do git (o workflow de release passa /DAppVersion); build local fica como 0.0.0-dev.
+#ifndef AppVersion
+  #define AppVersion "0.0.0-dev"
+#endif
 [Setup]
 AppName=YtCortador
-AppVersion=1.0
+AppVersion={#AppVersion}
 DefaultDirName={localappdata}\Programs\YtCortador
 DefaultGroupName=YtCortador
 ; Instala só para o usuário: sem admin, e o winget instala as dependências no perfil certo.

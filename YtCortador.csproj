@@ -5,6 +5,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Versão real vem da tag no release (-p:Version=1.2.3); build local é 0.0.0-dev. -->
+    <Version>0.0.0-dev</Version>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="fonts\*.ttf" LogicalName="%(Filename)%(Extension)" />
