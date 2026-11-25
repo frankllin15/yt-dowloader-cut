@@ -8,6 +8,10 @@ Cada PR acrescenta sua linha em **[Não lançado]**; na release essa seção vir
 
 ## [Não lançado]
 
+### Alterado
+- O instalador pergunta antes de instalar uma versão mais antiga por cima de uma mais nova (em modo silencioso, recusa).
+- O instalador passa a ter identificação fixa, para continuar atualizando a instalação existente mesmo se o nome do app mudar.
+
 ## [1.0.0] - 2026-11-24
 
 Primeira versão publicada.
