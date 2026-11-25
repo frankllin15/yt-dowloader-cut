@@ -8,6 +8,8 @@ Cada PR acrescenta sua linha em **[Não lançado]**; na release essa seção vir
 
 ## [Não lançado]
 
+## [1.0.1] - 2026-11-24
+
 ### Alterado
 - O instalador pergunta antes de instalar uma versão mais antiga por cima de uma mais nova (em modo silencioso, recusa).
 - O instalador passa a ter identificação fixa, para continuar atualizando a instalação existente mesmo se o nome do app mudar.
@@ -25,5 +27,6 @@ Primeira versão publicada.
 - Instalador (Inno Setup) que instala yt-dlp e ffmpeg via winget.
 - Fluxo de versionamento com tags, CI e release automática com changelog.
 
-[Não lançado]: https://github.com/frankllin15/yt-dowloader-cut/compare/v1.0.0...HEAD
+[Não lançado]: https://github.com/frankllin15/yt-dowloader-cut/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/frankllin15/yt-dowloader-cut/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/frankllin15/yt-dowloader-cut/releases/tag/v1.0.0
